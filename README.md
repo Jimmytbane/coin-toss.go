@@ -1,4 +1,4 @@
-![License](https://img.shields.io/aur/license/yaourt.svg)(
+![License](https://img.shields.io/aur/license/yaourt.svg)
 
 Golang
 
