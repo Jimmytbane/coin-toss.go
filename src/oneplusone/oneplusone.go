@@ -1,4 +1,3 @@
-// Prints the sum of 1 + 1 by adding the two integers together Made by https://github.com/jmfgdev
 package main
 
 import "fmt"
