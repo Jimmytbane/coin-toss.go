@@ -1,4 +1,3 @@
 language: go
-group: edge
 dist: trusty
 sudo: false
