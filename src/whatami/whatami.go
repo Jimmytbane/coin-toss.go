@@ -1,6 +1,10 @@
 package main
-import "fmt"
-import "runtime"
- func main() {
-		fmt.Println(runtime.GOOS)
- }
+
+import (
+  "fmt"
+  "runtime"
+)
+
+  func main() {
+	  fmt.Println(runtime.GOOS)
+}
