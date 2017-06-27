@@ -21,14 +21,13 @@ import (
   "time"
 )
 
-
 func main() {
   seed()
   choice()
   roll()
 }
 
-func choice () {
+func choice() {
   for {
   fmt.Println("Heads or Tails?")
   var input1 string
@@ -45,11 +44,11 @@ func choice () {
   }
 }
 
-func seed () {
+func seed() {
   rand.Seed(time.Now().UTC().UnixNano())
 }
 
-func roll () {
+func roll() {
   if rand.Intn(2) == 0 {
     fmt.Println("Heads")
   } else {
