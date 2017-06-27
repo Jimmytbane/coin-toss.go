@@ -1,10 +1,11 @@
 package main
+
 import "fmt"
 
 func add(x int, y int) int {
 	return x + y
 }
 
-func main () {
+func main() {
 	fmt.Println(add(1 , 1))
 }
