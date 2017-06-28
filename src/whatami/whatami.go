@@ -5,6 +5,6 @@ import (
   "runtime"
 )
 
-  func main() {
-	  fmt.Println(runtime.GOOS)
+func main() {
+  fmt.Println("I am: ", runtime.GOOS)
 }
