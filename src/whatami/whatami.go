@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println("I am: ", runtime.GOOS)
+	fmt.Println("I'm", runtime.GOOS, "and my arch is:", runtime.GOARCH)
 }
