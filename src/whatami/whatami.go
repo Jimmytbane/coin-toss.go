@@ -1,10 +1,10 @@
 package main
 
 import (
-  "fmt"
-  "runtime"
+	"fmt"
+	"runtime"
 )
 
 func main() {
-  fmt.Println("I am: ", runtime.GOOS)
+	fmt.Println("I am: ", runtime.GOOS)
 }

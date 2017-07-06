@@ -16,42 +16,42 @@
 package main
 
 import (
-  "fmt"
-  "math/rand"
-  "time"
+	"fmt"
+	"math/rand"
+	"time"
 )
 
 func main() {
-  seed()
-  choice()
-  roll()
+	seed()
+	choice()
+	roll()
 }
 
 func choice() {
-  for {
-  fmt.Println("Heads or Tails?")
-  var input1 string
-  fmt.Scanln(&input1)
-    if input1 == "heads" {
-      fmt.Println("You chose heads")
-      break
-    } else if input1 == "tails" {
-      fmt.Println("You chose tails")
-      break
-    } else {
-      fmt.Println("You said something invalid.")
-    }
-  }
+	for {
+		fmt.Println("Heads or Tails?")
+		var input1 string
+		fmt.Scanln(&input1)
+		if input1 == "heads" {
+			fmt.Println("You chose heads")
+			break
+		} else if input1 == "tails" {
+			fmt.Println("You chose tails")
+			break
+		} else {
+			fmt.Println("You said something invalid.")
+		}
+	}
 }
 
 func seed() {
-  rand.Seed(time.Now().UTC().UnixNano())
+	rand.Seed(time.Now().UTC().UnixNano())
 }
 
 func roll() {
-  if rand.Intn(2) == 0 {
-    fmt.Println("Heads")
-  } else {
-    fmt.Println("Tails")
-  }
+	if rand.Intn(2) == 0 {
+		fmt.Println("Heads")
+	} else {
+		fmt.Println("Tails")
+	}
 }
