@@ -43,7 +43,7 @@ func main() {
 	var input2 string
 	var input3 string
 	var choice string
-	var else_eval bool
+	var elseEval bool
 
 	for {
 		rand.Seed(time.Now().UTC().UnixNano())
@@ -69,7 +69,7 @@ func main() {
 	} else {
 		fmt.Printf("You Flipped: Tails")
 		fmt.Scanln(&input3)
-		else_eval = true
+		elseEval = true
 	}
 
 	if rand.Intn(2) == 0 && choice == "heads" {
@@ -78,7 +78,7 @@ func main() {
 		fmt.Println("You lost.")
 	} else if rand.Intn(2) == 1 && choice == "tails" {
 		fmt.Println("You won!")
-	} else if else_eval == true && choice == "heads" {
+	} else if elseEval == true && choice == "heads" {
 		fmt.Println("You lost.")
 	}
 }
