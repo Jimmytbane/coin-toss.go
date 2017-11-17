@@ -36,39 +36,50 @@ import (
 	"fmt"
 	"math/rand"
 	"time"
+	"strings"
 )
 
 func main() {
-	seed()
-	choice()
-	roll()
-}
+	var input2 string
+	var input3 string
+	var choice string
+	var else_eval bool
+	
 
-func choice() {
 	for {
-		fmt.Println("Heads or Tails?")
-		var input1 string
-		fmt.Scanln(&input1)
-		if input1 == "heads" {
-			fmt.Println("You chose heads")
+		rand.Seed(time.Now().UTC().UnixNano())
+
+		fmt.Printf("Heads or Tails?\n-->  ")
+		fmt.Scanln(&choice)
+		strings.ToLower(choice)
+
+		if (choice == "heads") {
+			fmt.Println("You chose Heads")
 			break
-		} else if input1 == "tails" {
-			fmt.Println("You chose tails")
+		} else if choice == "tails" {
+			fmt.Println("You chose Tails")
 			break
 		} else {
 			fmt.Println("You said something invalid.")
 		}
 	}
-}
 
-func seed() {
-	rand.Seed(time.Now().UTC().UnixNano())
-}
-
-func roll() {
-	if rand.Intn(2) == 0 {
-		fmt.Println("Heads")
+	if (rand.Intn(2) == 0) {
+		fmt.Printf("You Flipped: Heads")
+		fmt.Scanln(&input2)
 	} else {
-		fmt.Println("Tails")
+		fmt.Printf("You Flipped: Tails")
+		fmt.Scanln(&input3)
+		else_eval = true
+	}
+
+	if (rand.Intn(2) == 0 && choice == "heads") {
+		fmt.Println("You won!")
+	} else if (rand.Intn(2) == 0 && choice == "tails") {
+		fmt.Println("You lost.")
+	} else if (rand.Intn(2) == 1 && choice == "tails") {
+		fmt.Println("You won!")
+	} else if (else_eval == true && choice == "heads") {
+		fmt.Println("You lost.")
 	}
 }
