@@ -35,8 +35,8 @@ package main
 import (
 	"fmt"
 	"math/rand"
-	"time"
 	"strings"
+	"time"
 )
 
 func main() {
@@ -44,7 +44,6 @@ func main() {
 	var input3 string
 	var choice string
 	var else_eval bool
-	
 
 	for {
 		rand.Seed(time.Now().UTC().UnixNano())
@@ -53,7 +52,7 @@ func main() {
 		fmt.Scanln(&choice)
 		strings.ToLower(choice)
 
-		if (choice == "heads") {
+		if choice == "heads" {
 			fmt.Println("You chose Heads")
 			break
 		} else if choice == "tails" {
@@ -64,7 +63,7 @@ func main() {
 		}
 	}
 
-	if (rand.Intn(2) == 0) {
+	if rand.Intn(2) == 0 {
 		fmt.Printf("You Flipped: Heads")
 		fmt.Scanln(&input2)
 	} else {
@@ -73,13 +72,13 @@ func main() {
 		else_eval = true
 	}
 
-	if (rand.Intn(2) == 0 && choice == "heads") {
+	if rand.Intn(2) == 0 && choice == "heads" {
 		fmt.Println("You won!")
-	} else if (rand.Intn(2) == 0 && choice == "tails") {
+	} else if rand.Intn(2) == 0 && choice == "tails" {
 		fmt.Println("You lost.")
-	} else if (rand.Intn(2) == 1 && choice == "tails") {
+	} else if rand.Intn(2) == 1 && choice == "tails" {
 		fmt.Println("You won!")
-	} else if (else_eval == true && choice == "heads") {
+	} else if else_eval == true && choice == "heads" {
 		fmt.Println("You lost.")
 	}
 }
